@@ -14,3 +14,15 @@ body {
   background-color: red;
   margin-bottom: 1rem;
 }
+.box2{
+  height: 300px;
+  width: 300px;
+  background-color: green;
+  margin-bottom: 1rem;
+}
+.box3{
+  height: 300px;
+  width: 300px;
+  background-color: blue;
+  margin-bottom: 1rem;
+}
