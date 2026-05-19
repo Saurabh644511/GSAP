@@ -69,23 +69,48 @@ import "./style.css";
 
 // Note : Chaining me jo properties bar-bar repeat hoti hai uska value defaults set kr dete hai
 
+// const tl = gsap.timeline({
+//   defaults: {
+//     duration: 1.5,
+//     ease: "bounce.out"
+//   }
+// });
+
+// tl.to(".box", {
+//   x: 500,
+//   // duration: 1.5,
+//   backgroundColor: "blue",
+// }).to(".box2", {
+//   x: 1000,
+//   // duration: 1.5,
+//   backgroundColor: "blue",
+// }).to(".box3", {
+//   x: 800,
+//   // duration: 1.5,
+//   backgroundColor: "blue",
+// })
+
+// Position parameter
 const tl = gsap.timeline({
   defaults: {
     duration: 1.5,
-    ease: "bounce.out"
-  }
+    ease: "bounce.out",
+  },
 });
 
 tl.to(".box", {
   x: 500,
   // duration: 1.5,
   backgroundColor: "blue",
-}).to(".box2", {
-  x: 1000,
-  // duration: 1.5,
-  backgroundColor: "blue",
-}).to(".box3", {
-  x: 800,
-  // duration: 1.5,
-  backgroundColor: "blue",
 })
+  .to(".box2", {
+    x: 1000,
+    // duration: 1.5,
+    backgroundColor: "blue",
+    delay:1,
+  }, 2.3) 
+  .to(".box3", {
+    x: 800,
+    // duration: 1.5,
+    backgroundColor: "blue",
+  });
