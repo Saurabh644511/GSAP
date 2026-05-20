@@ -90,27 +90,41 @@ import "./style.css";
 //   backgroundColor: "blue",
 // })
 
-// Position parameter
-const tl = gsap.timeline({
-  defaults: {
-    duration: 1.5,
-    ease: "bounce.out",
-  },
-});
+// Position parameter: the position parameter is what decides when a tween runs relative to others. 
+// 1. Absolute time (numbers or labels): 0, 1.5, "labelName"
+//  Places the tween at that exact time or label in the timeline.
 
-tl.to(".box", {
-  x: 500,
-  // duration: 1.5,
-  backgroundColor: "blue",
-})
-  .to(".box2", {
-    x: 1000,
-    // duration: 1.5,
-    backgroundColor: "blue",
-    delay:1,
-  }, 2.3) 
-  .to(".box3", {
-    x: 800,
-    // duration: 1.5,
-    backgroundColor: "blue",
-  });
+// 2. Relative time (+= / -=): "+=1" → start 1 second after the previous tween ends.
+// " -=0.5" → start 0.5 seconds before the previous tween ends.
+
+// 3. "<" (play at same time as previous): " <" → aligns the tween’s start with the start of the previous tween.
+// " <+=0.5" → start 0.5s after the previous tween’s start.
+
+// 4. ">" (play after previous ends): " >" → aligns the tween’s start with the end of the previous tween.
+// " >-=0.25" → start 0.25s before the previous tween ends.
+
+// const tl = gsap.timeline({
+//   defaults: {
+//     duration: 1.5,
+//     ease: "bounce.out",
+//   },
+// });
+
+// tl.to(".box", {
+//   x: 500,
+//   // duration: 1.5,
+//   backgroundColor: "blue",
+// })
+//   .to(".box2", {
+//     x: 1000,
+//     // duration: 1.5,
+//     backgroundColor: "blue",
+//     delay:1,
+//   }, "+=0.7") 
+//   .to(".box3", {
+//     x: 800,
+//     // duration: 1.5,
+//     backgroundColor: "blue",
+//   });
+
+
