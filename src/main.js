@@ -128,3 +128,45 @@ import "./style.css";
 //   });
 
 
+// Labels in position parameters: Here we can use any variables for giving same animations on two or more than two elements ex: "same", "label1" or etc...
+
+// labels are like named bookmarks you drop inside a timeline. They make it easier to align animations without worrying about exact seconds.
+
+// We can also use position parameters and labels together. For Ex: Position Parameter + Labels
+// "label" → start exactly at the label.
+// "label+=1" → start 1s after the label.
+// "label-=0.5" → start 0.5s before the label.
+// "label<" → align with the start of the tween that begins at "label".
+// "label>" → align with the end of the tween that begins at "label".
+
+const tl = gsap.timeline({
+  defaults: {
+    duration: 1.5,
+    ease: "bounce.out",
+  },
+});
+
+tl.to(".box", {
+  x: 500,
+  // delay:1,
+  backgroundColor: "blue",
+},"same")
+  .to(".box2", {
+    x: 1000,
+    backgroundColor: "blue",
+    
+  }) 
+  .to(".box3", {
+    x: 1300,
+    backgroundColor: "blue",
+  },"same")
+  .to(".box4", {
+    x: 1500,
+    backgroundColor: "blue",
+  }) 
+  .to(".box5", {
+    x: 700,
+    backgroundColor: "blue",
+  },"same");
+
+

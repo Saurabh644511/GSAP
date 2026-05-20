@@ -23,6 +23,18 @@ body {
 .box3{
   height: 300px;
   width: 300px;
-  background-color: blue;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+.box4{
+  height: 300px;
+  width: 300px;
+  background-color: burlywood;
+  margin-bottom: 1rem;
+}
+.box5{
+  height: 300px;
+  width: 300px;
+  background-color: brown;
   margin-bottom: 1rem;
 }
