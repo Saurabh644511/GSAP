@@ -44,3 +44,9 @@ button1 {
   height: 100vh;
   width: 100%;
 }
+
+.boxDiv{
+  background-color: pink;
+  display: flex;
+  align-items: center;
+}
